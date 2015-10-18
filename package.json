@@ -1,0 +1,35 @@
+{
+  "name": "simple-format-date",
+  "version": "0.1.0",
+  "description": "A simple clean way to format dates with Javascript",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "npm run lint && node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gcanti/simple-format-date.git"
+  },
+  "author": "Giulio Canti <giulio.canti@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gcanti/simple-format-date/issues"
+  },
+  "homepage": "https://github.com/gcanti/simple-format-date",
+  "dependencies": {
+    "lodash.template": "^3.6.2"
+  },
+  "devDependencies": {
+    "eslint": "1.2.0",
+    "tape": "4.2.0"
+  },
+  "tags": [
+    "format",
+    "date"
+  ],
+  "keywords": [
+    "format",
+    "date"
+  ]
+}
