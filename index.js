@@ -1,4 +1,4 @@
-var template = require('lodash.template');
+var template = require('lodash/string/template');
 
 var templates = {};
 

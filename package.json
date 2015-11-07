@@ -1,6 +1,6 @@
 {
   "name": "simple-format-date",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple clean way to format dates with Javascript",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/gcanti/simple-format-date",
   "dependencies": {
-    "lodash.template": "^3.6.2"
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "eslint": "1.2.0",
