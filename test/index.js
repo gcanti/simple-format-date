@@ -3,10 +3,10 @@ var formatDate = require('../.');
 
 tape('formatDate(d, options)', function (t) {
 
-  t.test('should default to US format', function (assert) {
+  t.test('should default to ISO format', function (assert) {
     assert.plan(2);
-    assert.strictEqual(formatDate(new Date(1973, 0, 2)), '01/02/1973');
-    assert.strictEqual(formatDate(new Date(1973, 10, 30)), '11/30/1973');
+    assert.strictEqual(formatDate(new Date(1973, 0, 2)), '1973-01-02');
+    assert.strictEqual(formatDate(new Date(1973, 10, 30)), '1973-11-30');
   });
 
   t.test('should handle options.template as a string', function (assert) {

@@ -11,7 +11,7 @@ npm install simple-format-date
 ```js
 var formatDate = require('simple-format-date');
 
-formatDate(new Date(1973, 0, 2)); // => '01/02/1973'
+formatDate(new Date(1973, 0, 2)); // => '1973-01-02'
 formatDate(new Date(1973, 0, 2), { template: '<%= DD %>/<%= MM %>/<%= YY %>' }); // => '02/01/1973' (italian format)
 ```
 

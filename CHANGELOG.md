@@ -10,6 +10,11 @@
 
 **Note**: Gaps between patch versions are faulty/broken releases.
 
+## v0.2.0
+
+- **Breaking Change**
+  - change default format from US to ISO
+
 ## v0.1.1
 
 - **Internal**

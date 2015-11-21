@@ -44,7 +44,7 @@ function shallowCopy(a, b) {
 
 function getOptions(options) {
   var defaults = {
-    template: '<%= MM %>/<%= DD %>/<%= YY %>'
+    template: '<%= YY %>-<%= MM %>-<%= DD %>'
   };
   return shallowCopy(defaults, options);
 }
