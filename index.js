@@ -17,6 +17,7 @@ function splitDate(date) {
   var D = date.getDate();
   var h = date.getHours();
   var m = date.getMinutes();
+  var s = date.getSeconds();
   return {
     Y: String(YY).substr(-2),   // short year (15 for 2015)
     YY: YY,                     // numeric long year
@@ -27,7 +28,9 @@ function splitDate(date) {
     h: h,                       // numeric hours
     hh: padLeft(h, 2),          // padded hours
     m: m,                       // numeric minutes
-    mm: padLeft(m, 2)           // padded minutes
+    mm: padLeft(m, 2),          // padded minutes
+    s: s,                       // numeric secs
+    ss: padLeft(s, 2)           // padded secs
   };
 }
 

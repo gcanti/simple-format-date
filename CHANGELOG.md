@@ -10,6 +10,11 @@
 
 **Note**: Gaps between patch versions are faulty/broken releases.
 
+## v0.2.1
+
+- **New Feature**
+  - handle seconds
+
 ## v0.2.0
 
 - **Breaking Change**
