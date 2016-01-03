@@ -10,6 +10,12 @@
 
 **Note**: Gaps between patch versions are faulty/broken releases.
 
+## v0.2.2
+
+- **Internal**
+  - use lodash `padLeft`
+  - remove uselss `shallowCopy`
+
 ## v0.2.1
 
 - **New Feature**
