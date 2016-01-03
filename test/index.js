@@ -33,12 +33,12 @@ tape('formatDate(d, options)', function (t) {
       '12': 'December'
     };
 
-    assert.strictEqual(formatDate(new Date(1973, 0, 2), { template: function (parts) {
-      return parts.DD + ', ' + months[parts.MM] + ' ' + parts.YY;
+    assert.strictEqual(formatDate(new Date(1973, 0, 2), { template: function (locals) {
+      return locals.DD + ', ' + months[locals.MM] + ' ' + locals.YY;
     } }), '02, January 1973');
   });
 
-  t.test('should handle options.template as a function', function (assert) {
+  t.test('should handle hours, minutes and seconds', function (assert) {
     assert.plan(2);
     assert.strictEqual(formatDate(new Date(1973, 0, 2), { template: '<%= hh %>:<%= mm %>:<%= ss %>' }), '00:00:00');
     assert.strictEqual(formatDate(new Date(1973, 0, 2, 10, 15, 20), { template: '<%= hh %>:<%= mm %>:<%= ss %>' }), '10:15:20');
