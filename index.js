@@ -1,9 +1,11 @@
 var template = require('lodash/string/template');
 var padLeft = require('lodash/string/padLeft');
-
 var templates = {};
+var defaults = {
+  template: '<%= YY %>-<%= MM %>-<%= DD %>'
+};
 
-function splitDate(date) {
+function getLocals(date) {
   var YY = date.getFullYear();
   var M = date.getMonth() + 1;
   var D = date.getDate();
@@ -26,32 +28,14 @@ function splitDate(date) {
   };
 }
 
-function shallowCopy(a, b) {
-  if (b) {
-    for (var k in b) {
-      if (b.hasOwnProperty(k)) {
-        a[k] = b[k];
-      }
-    }
-  }
-  return a;
-}
-
-function getOptions(options) {
-  var defaults = {
-    template: '<%= YY %>-<%= MM %>-<%= DD %>'
-  };
-  return shallowCopy(defaults, options);
-}
-
 function formatDate(d, options) {
-  options = getOptions(options);
+  options = options || defaults;
   var formatter = options.template;
   if (typeof formatter === 'string') {
     // compile the template just once
     formatter = ( templates[formatter] = templates[formatter] || template(formatter) );
   }
-  return formatter(splitDate(d));
+  return formatter(getLocals(d));
 }
 
 module.exports = formatDate;

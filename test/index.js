@@ -10,9 +10,10 @@ tape('formatDate(d, options)', function (t) {
   });
 
   t.test('should handle options.template as a string', function (assert) {
-    assert.plan(2);
+    assert.plan(3);
     assert.strictEqual(formatDate(new Date(1973, 0, 2), { template: '<%= DD %>/<%= MM %>/<%= YY %>' }), '02/01/1973');
     assert.strictEqual(formatDate(new Date(1973, 0, 2), { template: '<%= D %>/<%= M %>/<%= Y %>' }), '2/1/73');
+    assert.strictEqual(formatDate(new Date(1973, 0, 2)), '1973-01-02', 'settings the template option should not change the default behavior');
   });
 
   t.test('should handle options.template as a function', function (assert) {
