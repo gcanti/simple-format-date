@@ -1,5 +1,5 @@
-var template = require('lodash/string/template');
-var padLeft = require('lodash/string/padLeft');
+var template = require('lodash/template');
+var padStart = require('lodash/padStart');
 var templates = {};
 var defaults = {
   template: '<%= YY %>-<%= MM %>-<%= DD %>'
@@ -16,15 +16,15 @@ function getLocals(date) {
     Y: String(YY).substr(-2),   // short year (15 for 2015)
     YY: YY,                     // numeric long year
     M: M,                       // numeric month (9 for September)
-    MM: padLeft(M, 2, '0'),     // padded month ('09' for September)
+    MM: padStart(M, 2, '0'),    // padded month ('09' for September)
     D: D,                       // numeric day
-    DD: padLeft(D, 2, '0'),     // padded day
+    DD: padStart(D, 2, '0'),    // padded day
     h: h,                       // numeric hours
-    hh: padLeft(h, 2, '0'),     // padded hours
+    hh: padStart(h, 2, '0'),    // padded hours
     m: m,                       // numeric minutes
-    mm: padLeft(m, 2, '0'),     // padded minutes
+    mm: padStart(m, 2, '0'),    // padded minutes
     s: s,                       // numeric secs
-    ss: padLeft(s, 2, '0')      // padded secs
+    ss: padStart(s, 2, '0')     // padded secs
   };
 }
 

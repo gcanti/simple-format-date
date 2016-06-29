@@ -10,6 +10,11 @@
 
 **Note**: Gaps between patch versions are faulty/broken releases.
 
+## v0.3.0
+
+- **Breaking Change**
+  - upgrade to lodash `^4.0.0`
+
 ## v0.2.2
 
 - **Internal**
